@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سیستم مدیریت اطلاعات پزشکی</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>سیستم مدیریت اطلاعات پزشکی</h1>
+
+        <div class="search-box">
+            <input type="text" id="patientCode" placeholder="کد 10 رقمی بیمار را وارد کنید" maxlength="10">
+            <button id="searchBtn">جستجو</button>
+            <button id="deletePatientBtn">حذف اطلاعات بیمار</button>
+        </div>
+
+        <div id="results">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="drugs">داروها</button>
+                <button class="tab-btn" data-tab="imaging">تصویربرداری</button>
+                <button class="tab-btn" data-tab="lab">آزمایشگاه</button>
+            </div>
+
+            <!-- تب داروها -->
+            <div id="drugs" class="tab-content active">
+                <div class="form-group">
+                    <label for="drugNameText">نام دارو:</label>
+                    <input type="text" id="drugNameText">
+                </div>
+                <div class="form-group">
+                    <label for="usageText">نحوه مصرف:</label>
+                    <input type="text" id="usageText">
+                </div>
+                <div class="form-group">
+                    <label for="doctorName">نام پزشک:</label>
+                    <input type="text" id="doctorName">
+                </div>
+                <div class="form-group">
+                    <label for="drugFile">فایل نسخه:</label>
+                    <input type="file" id="drugFile" accept=".jpg,.png,.pdf">
+                    <div class="file-info">حداکثر حجم: ۳ مگابایت</div>
+                </div>
+                <button id="saveDrug" class="save-btn">ذخیره اطلاعات</button>
+            </div>
+
+            <!-- تب تصویربرداری -->
+            <div id="imaging" class="tab-content">
+                <div class="form-group">
+                    <label for="imagingDoctor">نام پزشک:</label>
+                    <input type="text" id="imagingDoctor">
+                </div>
+                <div class="form-group">
+                    <label for="imagingType">نوع تصویربرداری:</label>
+                    <select id="imagingType">
+                        <option value="">-- انتخاب کنید --</option>
+                        <option value="MRI">MRI</option>
+                        <option value="SONO">سونوگرافی</option>
+                        <option value="CT">سی تی اسکن</option>
+                        <option value="X_RAY">اشعه ایکس</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="imagingProblem">مشکل بیمار:</label>
+                    <textarea id="imagingProblem"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="imagingFile">فایل تصویربرداری:</label>
+                    <input type="file" id="imagingFile" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+                <button id="saveImaging" class="save-btn">ذخیره اطلاعات</button>
+            </div>
+
+            <!-- تب آزمایشگاه -->
+            <div id="lab" class="tab-content">
+                <div class="form-group">
+                    <label for="labTest">نام آزمایش:</label>
+                    <input type="text" id="labTest">
+                </div>
+                <div class="form-group">
+                    <label for="labDoctor">نام پزشک:</label>
+                    <input type="text" id="labDoctor">
+                </div>
+                <div class="form-group">
+                    <label for="labFile">فایل آزمایش:</label>
+                    <input type="file" id="labFile" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+                <button id="saveLab" class="save-btn">ذخیره اطلاعات</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

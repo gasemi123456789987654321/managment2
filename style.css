@@ -1,0 +1,181 @@
+/* ==================== بدنه اصلی ==================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e6f2f7; /* رنگ آرامش بخش آبی روشن */
+    text-align: right;
+}
+
+/* ==================== کانتینر ==================== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ==================== عنوان ==================== */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ==================== جعبه جستجو ==================== */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#patientCode {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #b0cde3;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* ==================== دکمه‌ها ==================== */
+button {
+    padding: 10px 15px;
+    background-color: #5dade2; /* رنگ آرام آبی */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* ==================== نتایج ==================== */
+#results {
+    display: none;
+    margin-top: 20px;
+}
+
+/* ==================== تب‌ها ==================== */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #b0cde3;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    color: #7f8c8d;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    color: #2e86c1;
+    border-bottom: 3px solid #2e86c1;
+}
+
+/* ==================== محتوای تب‌ها ==================== */
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #b0cde3;
+    border-radius: 8px;
+    background-color: #f7fbfc; /* روشن و آرام */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ==================== فرم‌ها ==================== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="text"], 
+input[type="file"], 
+input[type="number"], 
+textarea, 
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b0cde3;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52,152,219,0.4);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* ==================== دکمه‌های اکشن ==================== */
+.action-btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.save-btn {
+    background-color: #27ae60; /* سبز آرامش بخش */
+}
+
+.save-btn:hover {
+    background-color: #1e8449;
+}
+
+.delete-btn {
+    background-color: #e74c3c; /* قرمز هشدار */
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* ==================== اطلاعات فایل ==================== */
+.file-info {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+/* ==================== ریسپانسیو ==================== */
+@media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .tabs {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
